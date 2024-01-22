@@ -22,6 +22,6 @@ process.stdin.on('end', () => {
   process.exit();
 });
 process.on('SIGINT', () => {
-    console.log('Thanks for writing!');
-    process.exit();
-  });
+  console.log('Thanks for writing!');
+  process.exit();
+});
