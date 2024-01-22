@@ -18,7 +18,7 @@ fs.readdir(
             if (err) {
               console.error('Error: ', err);
             } else {
-              const fileSize = stats.size / 1024;
+              const fileSize = stats.size;
               let fileExt = path.extname(file.name);
               fileExt = fileExt.slice(1);
               const fileNameWithoutExt = path.basename(
@@ -26,7 +26,7 @@ fs.readdir(
                 path.extname(file.name),
               );
               console.log(
-                `${fileNameWithoutExt}-${fileExt}-${fileSize}kb`,
+                `${fileNameWithoutExt}-${fileExt}-${fileSize}byte`,
               );
             }
           });
