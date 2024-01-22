@@ -25,9 +25,7 @@ fs.readdir(
                 file.name,
                 path.extname(file.name),
               );
-              console.log(
-                `${fileNameWithoutExt}-${fileExt}-${fileSize}byte`,
-              );
+              console.log(`${fileNameWithoutExt}-${fileExt}-${fileSize}byte`);
             }
           });
         }

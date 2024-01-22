@@ -6,7 +6,7 @@ const projectFolder = './05-merge-styles/project-dist';
 const bundle = './05-merge-styles/project-dist/bundle.css';
 
 fs.readdir(stylesFolder, (err, files) => {
- if (err) {
+  if (err) {
     console.log(err);
     return;
   }
@@ -20,7 +20,7 @@ fs.readdir(stylesFolder, (err, files) => {
         }
         styles += contents;
 
-        fs.writeFile(path.resolve(  bundle), styles, (err) => {
+        fs.writeFile(path.resolve(bundle), styles, (err) => {
           if (err) {
             console.log(err);
           }
