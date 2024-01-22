@@ -30,6 +30,21 @@ fs.mkdir(folderCopy, { recursive: true }, (err) => {
           }
         });
       });
+      fs.readdir(folderCopy, (err, filesCopy) => {
+        if (err) {
+          console.error(err);
+        } else {
+          filesCopy.forEach(fileCopy => {
+            if (!files.includes(fileCopy)) {
+              fs.unlink(path.join(folderCopy, fileCopy), (err) => {
+                if (err) {
+                  console.error(err);
+                }
+              });
+            }
+          });
+        }
+      });
     }
   });
 });
