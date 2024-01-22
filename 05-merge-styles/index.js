@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const stylesFolder = './05-merge-styles/styles';
-const projectFolder = './05-merge-styles/project-dist';
 const bundle = './05-merge-styles/project-dist/bundle.css';
 
 fs.readdir(stylesFolder, (err, files) => {
