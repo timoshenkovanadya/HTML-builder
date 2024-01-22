@@ -6,15 +6,13 @@ const projectFolder = './05-merge-styles/project-dist';
 const bundle = './05-merge-styles/project-dist/bundle.css';
 
 fs.readdir(stylesFolder, (err, files) => {
-  console.log(files);
-  if (err) {
+ if (err) {
     console.log(err);
     return;
   }
   let styles = '';
   files.forEach((file) => {
     if (path.extname(file) === '.css') {
-      console.log('HERE');
       fs.readFile(path.resolve(stylesFolder, file), 'utf8', (err, contents) => {
         if (err) {
           console.log(err);
