@@ -3,6 +3,11 @@ const fs = require('fs');
 const file = './02-write-file/text.txt';
 process.stdin.setEncoding('utf8');
 console.log('Enter your text here: ');
+fs.appendFile(file, '', (err) => {
+  if (err) {
+    throw err;
+  }
+});
 process.stdin.on('readable', () => {
   let chunk;
   while ((chunk = process.stdin.read()) !== null) {
