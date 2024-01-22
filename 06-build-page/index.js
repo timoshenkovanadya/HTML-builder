@@ -8,7 +8,6 @@ const assetsOrigin = '06-build-page/assets';
 const templatePath = '06-build-page/template.html';
 
 const projectDist = '06-build-page/project-dist';
-const indexHtml = '06-build-page/project-dist/index.html';
 const styleCss = '06-build-page/project-dist/style.css';
 const assetsCopy = '06-build-page/project-dist/assets';
 
